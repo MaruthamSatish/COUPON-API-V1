@@ -20,6 +20,7 @@ public class CouponRestController {
 	public ResponseEntity<List<Coupon>> findByCouponCode(@PathVariable("couponCode") String couponCode) {
 		List<Coupon> getCoupons = couponRepository.findByCouponCode(couponCode);
 		if (getCoupons.isEmpty()) {
+			System.out.println("Updated");
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<List<Coupon>>(getCoupons, HttpStatus.OK);
