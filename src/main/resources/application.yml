@@ -3,11 +3,11 @@ server:
 spring:
   application:
     name: coupon-api
-  zipkin:
-    base-url: http://localhost:9411/
-  sleuth:
-    sampler:
-      probability: 1
+#  zipkin:
+#    base-url: http://localhost:9411/
+#  sleuth:
+#    sampler:
+#      probability: 1
 
   datasource:
      password: ${RDS_PASSWORD:root}
@@ -18,14 +18,14 @@ spring:
     hibernate:
       ddl-auto: update
       
-eureka:
-  client:
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: true
-    hostname: localhost
+#eureka:
+#  client:
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#  instance:
+#    preferIpAddress: true
+#    hostname: localhost
        
        
     
